@@ -17,12 +17,12 @@
         />
 
         <!-- Charts Row -->
-        <v-row class="mb-6">
-          <v-col cols="12" md="6">
-            <StatusChart :status-data="dashboardData.statusData" />
+        <v-row class="mb-6" align="stretch">
+          <v-col cols="12" md="6" class="d-flex">
+            <StatusChart :status-data="dashboardData.statusData" class="flex-fill" />
           </v-col>
-          <v-col cols="12" md="6">
-            <RegionalChart :regional-data="dashboardData.regionalData" />
+          <v-col cols="12" md="6" class="d-flex">
+            <RegionalChart :regional-data="dashboardData.regionalData" class="flex-fill" />
           </v-col>
         </v-row>
 

@@ -1,11 +1,11 @@
 <template>
-  <v-card>
-    <v-card-title class="d-flex align-center">
+  <v-card class="d-flex flex-column" style="height: 100%;">
+    <v-card-title class="d-flex align-center flex-shrink-0">
       <v-icon class="mr-2">mdi-chart-bar</v-icon>
       Regional Performance
     </v-card-title>
-    <v-card-text>
-      <div class="chart-container">
+    <v-card-text class="flex-grow-1">
+      <div class="chart-container" style="height: 100%;">
         <Bar :data="chartData" :options="chartOptions" />
       </div>
     </v-card-text>
