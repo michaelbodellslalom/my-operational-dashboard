@@ -37,7 +37,7 @@ export const metrics: Metric[] = [
   },
   {
     id: 'm4',
-    title: 'Avg Resolution Time',
+    title: 'Avg Resolution Time (days)',
     value: 12.3,
     unit: '',
     change: 6.8,
