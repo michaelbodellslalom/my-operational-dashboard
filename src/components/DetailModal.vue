@@ -102,7 +102,6 @@
           <v-row>
             <v-col cols="12">
               <v-alert
-                :type="(item as Exception).type"
                 :color="getSeverityColor((item as Exception).severity)"
                 prominent
               >
