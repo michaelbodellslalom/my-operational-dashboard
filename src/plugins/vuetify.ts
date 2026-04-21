@@ -12,24 +12,31 @@ export default createVuetify({
     themes: {
       light: {
         colors: {
-          primary: '#1976D2',
-          secondary: '#424242',
-          accent: '#82B1FF',
-          error: '#FF5252',
-          info: '#2196F3',
+          primary: '#003466', // Colorado navy blue
+          secondary: '#FFC627', // Colorado gold
+          accent: '#367C2B', // Colorado green
+          error: '#D64545',
+          info: '#0071BC',
           success: '#4CAF50',
-          warning: '#FFC107',
+          warning: '#FFC627',
+          background: '#F5F5F5',
+          surface: '#FFFFFF',
         },
       },
     },
   },
   defaults: {
     VCard: {
-      elevation: 2,
+      elevation: 1,
+      rounded: 'md',
     },
     VBtn: {
       color: 'primary',
       variant: 'flat',
+      rounded: 'md',
+    },
+    VChip: {
+      rounded: 'md',
     },
   },
 })
