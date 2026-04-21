@@ -1,9 +1,8 @@
 <template>
   <v-app-bar color="primary" prominent class="dashboard-header">
     <v-app-bar-title class="d-flex align-center">
-      <v-icon size="32" class="mr-2" color="secondary">mdi-view-dashboard</v-icon>
       <div class="header-text">
-        <div class="text-h6 font-weight-bold">Case Management</div>
+        <div class="text-h6 font-weight-bold">Case Management Dashboard</div>
         <div class="text-caption opacity-90 d-none d-sm-block">Public & Social Impact Services</div>
       </div>
     </v-app-bar-title>
@@ -70,11 +69,4 @@ const formatLastUpdate = computed(() => (date: Date) => {
 .header-text {
   line-height: 1.3;
   max-width: 280px;
-}
-
-@media (max-width: 600px) {
-  .header-text {
-    max-width: 180px;
-  }
-}
 </style>
