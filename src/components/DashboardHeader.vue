@@ -68,5 +68,5 @@ const formatLastUpdate = computed(() => (date: Date) => {
 
 .header-text {
   line-height: 1.3;
-  max-width: 280px;
+}
 </style>
