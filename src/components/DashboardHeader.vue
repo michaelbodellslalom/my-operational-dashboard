@@ -35,8 +35,6 @@
         color="white"
         variant="text"
       ></v-btn>
-
-      <v-btn icon="mdi-cog" color="white" variant="text"></v-btn>
     </template>
   </v-app-bar>
 </template>
