@@ -1,7 +1,7 @@
 import { ref, computed } from 'vue'
 import type { DashboardData, DashboardFilters, Operation, Exception } from '../types/dashboard'
 import { mockDashboardData } from '../data/mockData'
-import { isWithinInterval, startOfDay, endOfDay } from 'date-fns'
+import { isWithinInterval, startOfDay, endOfDay, subDays } from 'date-fns'
 
 const REFRESH_INTERVAL = 30000 // 30 seconds
 
@@ -13,7 +13,7 @@ export function useDashboard() {
   
   const filters = ref<DashboardFilters>({
     dateRange: {
-      start: startOfDay(new Date()),
+      start: startOfDay(subDays(new Date(), 90)),
       end: endOfDay(new Date())
     },
     status: [],
