@@ -16,14 +16,6 @@
           class="mb-6"
         />
 
-        <!-- Filters -->
-        <FilterControls
-          :filters="filters"
-          @update="updateFilters"
-          @clear="clearFilters"
-          class="mb-6"
-        />
-
         <!-- Charts Row -->
         <v-row class="mb-6">
           <v-col cols="12" md="6">
@@ -67,7 +59,6 @@ import type { Operation, Exception, Metric } from './types/dashboard'
 
 import DashboardHeader from './components/DashboardHeader.vue'
 import MetricsOverview from './components/MetricsOverview.vue'
-import FilterControls from './components/FilterControls.vue'
 import StatusChart from './components/StatusChart.vue'
 import RegionalChart from './components/RegionalChart.vue'
 import OperationsTable from './components/OperationsTable.vue'
@@ -79,13 +70,10 @@ const {
   isLoading,
   lastRefresh,
   autoRefresh,
-  filters,
   filteredOperations,
   filteredExceptions,
   refreshData,
   exportToCSV,
-  updateFilters,
-  clearFilters,
   startAutoRefresh,
   stopAutoRefresh
 } = useDashboard()
