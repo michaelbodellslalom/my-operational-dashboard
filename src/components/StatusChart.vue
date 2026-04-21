@@ -5,10 +5,10 @@
       Status Distribution
     </v-card-title>
     <v-card-text class="flex-grow-1 d-flex flex-column">
-      <div class="chart-container flex-shrink-0">
+      <div class="chart-container flex-shrink-0" style="max-height: 250px; max-width: 250px; margin: 0 auto;">
         <Doughnut :data="chartData" :options="chartOptions" />
       </div>
-      <v-list dense class="mt-4">
+      <v-list dense class="mt-4 flex-shrink-0">
         <v-list-item
           v-for="item in statusData"
           :key="item.status"
