@@ -84,7 +84,7 @@ const props = defineProps<{
 
 const emit = defineEmits<{
   export: []
-  viewDetails: [operation: Operation]
+  'view-details': [operation: Operation]
 }>()
 
 const headers = [
@@ -129,7 +129,7 @@ const handleExport = () => {
 }
 
 const handleRowClick = (_event: any, row: { item: Operation }) => {
-  emit('viewDetails', row.item)
+  emit('view-details', row.item)
 }
 </script>
 

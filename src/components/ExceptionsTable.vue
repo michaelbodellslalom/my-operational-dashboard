@@ -88,7 +88,7 @@ const props = defineProps<{
 
 const emit = defineEmits<{
   export: []
-  viewDetails: [exception: Exception]
+  'view-details': [exception: Exception]
 }>()
 
 const getSeverityColor = (severity: string): string => {
@@ -129,7 +129,7 @@ const handleExport = () => {
 }
 
 const handleExceptionClick = (exception: Exception) => {
-  emit('viewDetails', exception)
+  emit('view-details', exception)
 }
 </script>
 
