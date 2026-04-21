@@ -4,14 +4,17 @@
       <div class="d-flex justify-space-between align-start mb-2">
         <v-icon :color="`${metric.color}-lighten-2`" size="40">{{ metric.icon }}</v-icon>
         <v-chip
-          :color="metric.trend === 'positive' ? 'success' : metric.trend === 'negative' ? 'error' : 'grey'"
+          color="white"
           size="small"
           variant="flat"
+          :class="metric.changeType === 'increase' ? 'trend-up' : 'trend-down'"
         >
-          <v-icon start size="small">
+          <v-icon start size="small" :color="metric.changeType === 'increase' ? 'success' : 'error'">
             {{ metric.changeType === 'increase' ? 'mdi-arrow-up' : 'mdi-arrow-down' }}
           </v-icon>
-          {{ Math.abs(metric.change) }}%
+          <span :style="{ color: metric.changeType === 'increase' ? '#4CAF50' : '#D64545' }">
+            {{ Math.abs(metric.change) }}%
+          </span>
         </v-chip>
       </div>
 
@@ -19,7 +22,7 @@
         {{ formatValue(metric.value) }}{{ metric.unit }}
       </div>
 
-      <div class="text-subtitle-2 text-white-darken-2">
+      <div class="text-subtitle-2 text-white">
         {{ metric.title }}
       </div>
     </v-card-text>
@@ -66,5 +69,10 @@ const formatValue = (value: number): string => {
 .metric-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+.trend-up,
+.trend-down {
+  font-weight: 600;
 }
 </style>
