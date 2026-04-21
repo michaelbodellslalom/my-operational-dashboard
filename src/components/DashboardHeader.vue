@@ -1,10 +1,10 @@
 <template>
   <v-app-bar color="primary" prominent class="dashboard-header">
     <v-app-bar-title class="d-flex align-center">
-      <v-icon size="large" class="mr-2" color="secondary">mdi-view-dashboard</v-icon>
-      <div>
-        <div class="text-h5 font-weight-bold">Case Management Dashboard</div>
-        <div class="text-caption opacity-90">Public & Social Impact Services</div>
+      <v-icon size="32" class="mr-2" color="secondary">mdi-view-dashboard</v-icon>
+      <div class="header-text">
+        <div class="text-h6 font-weight-bold">Case Management</div>
+        <div class="text-caption opacity-90 d-none d-sm-block">Public & Social Impact Services</div>
       </div>
     </v-app-bar-title>
 
@@ -65,5 +65,16 @@ const formatLastUpdate = computed(() => (date: Date) => {
 .dashboard-header {
   background: linear-gradient(135deg, #003466 0%, #004d8c 100%) !important;
   box-shadow: 0 2px 8px rgba(0, 52, 102, 0.3);
+}
+
+.header-text {
+  line-height: 1.3;
+  max-width: 280px;
+}
+
+@media (max-width: 600px) {
+  .header-text {
+    max-width: 180px;
+  }
 }
 </style>
